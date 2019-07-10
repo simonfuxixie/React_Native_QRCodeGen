@@ -107,7 +107,8 @@ const CAMERA_REF = 'camera';
                                     }}
                         onGoogleVisionBarcodesDetected={({ barcodes }) => {this.onBarCodeReads(barcodes[0])}}
                         style={BarcodeStyles.cameraView}
-                        aspect={Camera.constants.Aspect.fill}
+                        //aspect is not a valid props for RNCamera View
+                        //aspect={Camera.constants.Aspect.fill}
                         playSoundOnCapture
                     >
                           <View style={BarcodeStyles.maskOutter}>
